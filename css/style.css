@@ -1,128 +1,138 @@
+
+
+/* CSS Reset */
 *{
-    margin: 0px;
+    margin: 0;
     padding: 0;
 }
 
-:root{
-    --navbar-height:59px;
+html{
+    scroll-behavior: smooth;
 }
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
 #navbar{
     display: flex;
-    position: relative;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    
 }
-#logo{
-margin: 3px 3px;
 
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
 }
 
 #logo img{
-    border: 1px solid #781919;
-    border-radius: 1px;
-    padding: 0px;
-    width: 79px;
+    height: 59px;
+    margin: 3px 6px;
 }
-#navbar::before{
-    content: "";
-    background-color: rgb(14, 3, 3);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index:-1;
 
 
-}
+/* Navigation Bar: List Styling */
+
 #navbar ul{
     display: flex;
+    font-family: 'Baloo Bhai', cursive;
 }
-#navbar ul li{
-list-style-type:none ;
-font-size:1.3rem;
+
+#navbar ul li{ 
+    list-style-type: none;
+    font-size: 1.3rem;
 }
+
 #navbar ul li a{
-    color: azure;
+    color: white;
     display: block;
     padding: 3px 22px;
     border-radius: 20px;
     text-decoration: none;
 }
-#navbar ul li a:hover{
-   color: black; 
-background-color: azure;
 
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
 }
 
-
-
-/*home section*/
+/* Home Section */
 #home{
     display: flex;
-    color: rgb(11, 16, 20);
     flex-direction: column;
-    padding: 3px 200px;
-    justify-content:center;
-    align-items:center;
-
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
 }
-#home::before{
+
+#home::before{ 
     content: "";
-    background:url(../cssimag2.jpg) no-repeat top center/cover;
     position: absolute;
-    height: 100%;
+    background: url(../cssimag2.jpg) no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
     width: 100%;
-    z-index:-1;
-    opacity: 0.7;
-    
-
-
+    z-index: -1;
+    opacity:0.89;
 }
+
 #home h1{
-    color:rgb(8, 7, 7);
-    text-align:center;
-}
-#home p{
-    color:rgb(234, 231, 231);
+    color:white;
     text-align: center;
-    font-size:1.5;
-}
-.h-primary{
-    font-size:2.8rem;
-    padding:12px;
+    font-family: 'Bree Serif', serif;
 }
 
-.btn{
-    padding: 6px 20px;
-    border: 2px solid rgb(11, 2, 2) ;
-    background-color:rgb(138, 29, 109);
-    color: white;
-    margin: 17px;
-    font-size: 1.5 rem;
-    border-radius:15px;
-    cursor:pointer;
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
 }
 /* Services Section */
-#services-container{
-    margin: 0px -5rem;
-    margin-top: 157px;
-    margin-bottom: 0px;
-    background-color: white;
-    
-
-}
 #services{
-    margin: 109px;
-    font: white;
+    margin: 34px;
     display: flex;
+  
+    
 }
 #services .box{ 
     border: 2px solid brown;
     padding: 34px;
     margin: 2px 55px;
     border-radius: 28px;
-    background:white;
+    background: #f2f2f2;
     margin-bottom: 20px;
+   
+}
+#services-container{
+    margin: 0px -5rem;
+    margin-top: 157px;
+    margin-bottom: 0px;
+    background-color: white;
+    
 }
 
 #services .box img{ 
+   
+
    height: 160px;
    margin: auto;
    display: block;
@@ -141,7 +151,7 @@ background-color: azure;
 #client-section::before{
  content: "";
  position: absolute;
- background: url('/bg3.jpeg');
+ background: url('../bg.jpg');
  width: 100%;
  height: 100%;
  z-index: -1;
@@ -223,8 +233,8 @@ footer{
 
 .btn{
     padding: 6px 20px;
-    border: 2px solid rgb(14, 5, 5);
-    background-color: rgb(149, 36, 109);
+    border: 2px solid white;
+    background-color: brown;
     color: white;
     margin: 17px;
     font-size: 1.5rem;
@@ -235,3 +245,114 @@ footer{
 .center{
     text-align: center;
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added to include padding and border in element's total width and height */
+}
+
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between; /* Adjusted to evenly distribute items */
+    align-items: center;
+    padding: 10px 30px; /* Added padding for better spacing */
+}
+
+#logo {
+    margin: 3px;
+}
+
+#logo img {
+    border: 1px solid #781919;
+    border-radius: 1px;
+    padding: 0;
+    width: 100px; /* Made the logo responsive */
+    height: auto; /* Ensures aspect ratio is maintained */
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none; /* Corrected property name */
+}
+
+#navbar ul li {
+    margin: 0 10px; /* Added margin between navbar items */
+}
+
+#navbar ul li a {
+    color: azure;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Home Section */
+#home {
+    text-align: center; /* Centering content */
+    padding: 50px; /* Increased padding for better spacing */
+}
+
+#home h1 {
+    font-size: 2.5rem; /* Made font size responsive */
+}
+
+#home p {
+    font-size: 1.2rem; /* Made font size responsive */
+}
+
+.btn {
+    font-size: 1.2rem; /* Made font size responsive */
+}
+
+/* Services Section */
+#services-container {
+    margin-top: 0px;
+    padding: 10px; /* Increased padding for better spacing */
+}
+
+#services {
+    margin: 34px;
+    
+    display: flex;
+    flex-wrap: wrap; /* Added to wrap services on smaller screens */
+    justify-content: center;
+}
+
+#services .box {
+    flex: 1; /* Made boxes take equal space */
+    max-width: 300px; /* Added to limit box width */
+    margin: 20px;
+}
+
+#services .box img {
+    width: 100%; /* Made images responsive */
+    height: auto; /* Ensures aspect ratio is maintained */
+}
+
+/* Client Section */
+#clients {
+    flex-wrap: wrap; /* Added to wrap client items */
+    justify-content: space-around; /* Adjusted to evenly distribute items */
+    padding: 50px; /* Increased padding for better spacing */
+}
+
+.client-item {
+    flex: 0 0 200px; /* Added to set a fixed width for client items */
+    margin: 20px;
+}
+
+#clients img {
+    width: 100%; /* Made images responsive */
+    height: auto; /* Ensures aspect ratio is maintained */
+}
+
+
+
+
