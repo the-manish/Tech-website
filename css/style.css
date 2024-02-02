@@ -19,7 +19,6 @@ html{
 #navbar{
     display: flex;
     align-items: center;
-    position: sticky;
     top: 0px;
     
 }
@@ -60,7 +59,7 @@ html{
 }
 
 #navbar ul li a{
-    color: white;
+    color: rgb(255, 255, 255);
     display: block;
     padding: 3px 22px;
     border-radius: 20px;
